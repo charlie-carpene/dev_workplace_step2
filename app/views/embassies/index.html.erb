@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Embassies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Country</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Coordinates</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @embassies.each do |embassy| %>
+      <tr>
+        <td><%= embassy.type_of_embassy %></td>
+        <td><%= embassy.country %></td>
+        <td><%= embassy.latitude %></td>
+        <td><%= embassy.longitude %></td>
+        <td><%= embassy.coordinates %></td>
+        <td><%= link_to 'Show', embassy %></td>
+        <td><%= link_to 'Edit', edit_embassy_path(embassy) %></td>
+        <td><%= link_to 'Destroy', embassy, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Embassy', new_embassy_path %>
