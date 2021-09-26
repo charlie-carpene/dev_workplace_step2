@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails app.
+To run it you need:
+* Rails >6.*
+* Ruby >3.*
 
-Things you may want to cover:
+# Install
 
-* Ruby version
+first clone the repo:
+`$ git clone https://github.com/charlie-carpene/dev_workplace_step2.git`
 
-* System dependencies
+go to folder and:
+`$ bundle install`
+`$ rails db:create db:migrate db:seed`
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+then launch your local server:
+`$ rails s`
