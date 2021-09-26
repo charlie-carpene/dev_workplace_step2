@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Countries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Code</th>
+      <th>Iso 2</th>
+      <th>Iso 3</th>
+      <th>Name fr</th>
+      <th>Name en</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @countries.each do |country| %>
+      <tr>
+        <td><%= country.id %></td>
+        <td><%= country.code %></td>
+        <td><%= country.iso_2 %></td>
+        <td><%= country.iso_3 %></td>
+        <td><%= country.name_fr %></td>
+        <td><%= country.name_en %></td>
+        <td><%= link_to 'Show', country %></td>
+        <td><%= link_to 'Edit', edit_country_path(country) %></td>
+        <td><%= link_to 'Destroy', country, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<div class="d-flex justify-content-around">
+  <%= link_to 'New Country', new_country_path, class: "btn btn-outline-primary m-2 py-2 px-4" %>
+  <%= link_to "Retour", root_path, class: "btn btn-outline-warning m-2 py-2 px-4" %>
+</div>
