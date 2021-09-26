@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @embassy.type_of_embassy %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @embassy.country %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @embassy.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @embassy.longitude %>
+</p>
+
+<p>
+  <strong>Coordinates:</strong>
+  <%= @embassy.coordinates %>
+</p>
+
+<%= link_to 'Edit', edit_embassy_path(@embassy) %> |
+<%= link_to 'Back', embassies_path %>

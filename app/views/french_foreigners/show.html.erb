@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @french_foreigner.country %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @french_foreigner.year %>
+</p>
+
+<p>
+  <strong>Nbr french:</strong>
+  <%= @french_foreigner.nbr_french %>
+</p>
+
+<%= link_to 'Edit', edit_french_foreigner_path(@french_foreigner) %> |
+<%= link_to 'Back', french_foreigners_path %>

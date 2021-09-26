@@ -1,0 +1,2 @@
+class FrenchForeigner < ApplicationRecord
+end

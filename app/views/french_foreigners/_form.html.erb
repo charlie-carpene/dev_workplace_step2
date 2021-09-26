@@ -1,0 +1,32 @@
+<%= form_with(model: french_foreigner) do |form| %>
+  <% if french_foreigner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(french_foreigner.errors.count, "error") %> prohibited this french_foreigner from being saved:</h2>
+
+      <ul>
+        <% french_foreigner.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.number_field :year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nbr_french %>
+    <%= form.number_field :nbr_french %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
